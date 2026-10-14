@@ -1,0 +1,67 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Virtual environments and local package metadata
+.venv/
+venv/
+env/
+ENV/
+.env/
+*.egg-info/
+build/
+dist/
+
+# Generated run outputs and serialized models
+outputs/*
+!outputs/
+output/
+artifacts/
+models/*
+!models/
+*.joblib
+*.pkl
+*.pickle
+!outputs/README.md
+!models/README.md
+
+# Local datasets and notebook checkpoint files
+data/*
+!data/
+local_data/
+*.csv
+*.parquet
+*.feather
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+!data/README.md
+
+# IDE and editor files
+.idea/
+.vscode/
+.fleet/
+*.code-workspace
+*.swp
+*.swo
+
+# Operating-system files and logs
+.DS_Store
+Thumbs.db
+*.log
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+.secrets/
+*.pem
+*.key
+*.crt
