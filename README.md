@@ -309,35 +309,8 @@ Holdout machines:  machine_001, machine_002
 These numbers demonstrate that the code ran end-to-end on the designed
 synthetic signal. They should not be presented as production performance.
 
-## How to present the project
 
-For a portfolio demonstration, show this sequence:
 
-1. Explain the business problem: unplanned downtime and reactive maintenance.
-2. Show the sensor columns and the simulated warning period.
-3. Explain why the split is by machine rather than by random row.
-4. Run the CLI and show the JSON summary.
-5. Open `metrics.json` and explain precision, recall, F1, and the confusion matrix.
-6. Open `sensor_trends.png` and `probability_timeline.png`.
-7. Show `failure_alerts.csv` as the model's user-facing output.
-8. State the synthetic-data and validation limitations clearly.
-
-Recommended screenshot names for a GitHub proof set:
-
-```text
-01-repository-overview.png
-02-install-and-test.png
-03-run-command.png
-04-output-folder.png
-05-sensor-trends.png
-06-confusion-matrix.png
-07-probability-timeline.png
-08-metrics-and-split.png
-09-git-history.png
-```
-
-Place curated screenshots under `images/` and link them from this README only
-after they have been captured and reviewed.
 
 ## Project structure
 
@@ -363,69 +336,7 @@ after they have been captured and reviewed.
 └── outputs/                        # local generated outputs; ignored by Git
 ```
 
-## GitHub publishing
 
-### Recommended repository details
-
-**Repository name:**
-
-```text
-ai-predictive-maintenance-iot
-```
-
-**Description:**
-
-```text
-Offline, reproducible predictive-maintenance demo for synthetic IoT sensor data with leakage-safe features, machine-grouped validation, model artifacts, metrics, and plots.
-```
-
-**Suggested topics:**
-
-```text
-predictive-maintenance, internet-of-things, iot, machine-learning,
-scikit-learn, time-series, industrial-ai, condition-monitoring, python,
-manufacturing
-```
-
-### First push
-
-Create an empty repository on GitHub, then run these commands from the project
-root. Replace the placeholder username with your GitHub username.
-
-```bash
-git init
-git branch -M main
-git add README.md requirements.txt .gitignore src tests docs images data notebooks models outputs/README.md
-git commit -m "feat: add reproducible predictive maintenance pipeline"
-git remote add origin https://github.com/<YOUR-USERNAME>/ai-predictive-maintenance-iot.git
-git push -u origin main
-```
-
-### Suggested milestone commits
-
-```bash
-git add src/simulator.py tests/test_simulator.py
-git commit -m "feat: add deterministic IoT telemetry simulator"
-
-git add src/features.py tests/test_features.py
-git commit -m "feat: add leakage-safe sensor features"
-
-git add src/model.py src/pipeline.py tests/test_pipeline.py
-git commit -m "feat: train and evaluate failure-alert models"
-
-git add README.md docs images
-git commit -m "docs: polish GitHub project presentation"
-
-git push
-```
-
-Do not commit:
-
-- `.venv/`
-- `outputs/` generated run directories
-- `*.joblib` model binaries
-- Private or proprietary datasets
-- Passwords, tokens, API keys, or screenshots containing secrets
 
 ## Limitations and next steps
 
@@ -462,3 +373,7 @@ This repository is intended for education, experimentation, and portfolio
 demonstration. Add a formal open-source license before publishing if you want
 others to reuse the code. Do not use this prototype to make unsupervised
 industrial, safety, medical, aviation, or infrastructure decisions.
+
+## Author
+**Jayesh Rathi** — 3rd Year IT Student, Government College of Engineering, Amravati  
+[LinkedIn](https://www.linkedin.com/in/jayesh-rathi-5ab8973b6) | [Email](mailto:jayeshrathinew@gmail.com)
